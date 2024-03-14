@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*
+Farver
+*/
+
+:root {
+  --baggrund: ;
+  --primary: #ffffff;
+  --farve1: #fa00ff;
+  --farve2: #3489fd;
+  --farve3: #000000;
+  --farve1hover: #fb00ff7d;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url(/billeder/baggrund.svg);
+  background-color: #3489fd;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
