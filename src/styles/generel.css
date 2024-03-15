@@ -10,10 +10,6 @@ img {
   display: block;
 }
 
-/*
-Farver
-*/
-
 :root {
   --baggrund: ;
   --primary: #ffffff;
@@ -25,7 +21,6 @@ Farver
 
 body {
   font-family: "Roboto", sans-serif;
-  background-image: url(/billeder/baggrund.svg);
   background-color: #3489fd;
 }
 
