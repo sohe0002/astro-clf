@@ -1,0 +1,90 @@
+---
+import Knap from "../components/Knap.astro";
+---
+
+<section>
+  <h2>Nyhedsbrev</h2>
+
+  <form class="myForm">
+    <div class="form-name">
+      <label>
+        <input type="text" placeholder="Navn" id="navn" name="navn" />
+      </label>
+    </div>
+
+    <div class="form-mail">
+      <label>
+        <input type="email" placeholder="Mail" name="mail" id="mail" />
+      </label>
+    </div>
+  </form>
+
+  <form class="form-type">
+    <div class="besog">
+      <input type="checkbox" id="besogende" name="besogende" />
+      <label for="besogende">Besøgende</label>
+    </div>
+
+    <div class="kunstner">
+      <input type="checkbox" name="kunstner" id="kunster" />
+      <label for="kunstner">Kunstner</label>
+    </div>
+
+    <div class="partner">
+      <input type="checkbox" name="partner" id="partner" />
+      <label for="partner">Partner</label>
+    </div>
+  </form>
+
+  <div class="div_knap">
+    <button class="submit-knap" id="submit-knap" type="button"> Send </button>
+  </div>
+</section>
+
+<style>
+  .myForm {
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .myForm label input {
+    border-radius: 20px;
+    height: 40px;
+    width: 200px;
+    padding-left: 15px;
+  }
+
+  .form-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    padding-bottom: 20px;
+  }
+
+  .form-name,
+  .form-mail {
+    padding: 5px;
+  }
+
+  .submit-knap {
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .div_knap {
+    text-align: center;
+  }
+
+  .div_knap button {
+    font-size: 12px;
+    align-self: center;
+    height: 35px;
+    width: 70px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+</style>

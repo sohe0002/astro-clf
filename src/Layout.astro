@@ -1,6 +1,7 @@
 ---
 import "./styles/generel.css";
 import Headmenu from "./components/Headmenu.astro";
+import NyhedsbrevFooter from "./components/Nyhedsbrev_footer.astro";
 ---
 
 <html lang="en">
@@ -26,6 +27,8 @@ import Headmenu from "./components/Headmenu.astro";
 
     <slot />
 
-    <footer>NYHEDSBREV MM</footer>
+    <footer>
+      <NyhedsbrevFooter />
+    </footer>
   </body>
 </html>

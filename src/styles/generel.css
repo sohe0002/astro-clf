@@ -26,16 +26,20 @@ body {
 
 h1 {
   font-family: "Roboto", sans-serif;
+  color: var(--primary);
 }
 
 h2 {
   font-family: "Roboto", sans-serif;
+  color: var(--primary);
 }
 
 h3 {
   font-family: "Roboto", sans-serif;
+  color: var(--primary);
 }
 
 p {
   font-family: "Roboto", sans-serif;
+  color: var(--primary);
 }
