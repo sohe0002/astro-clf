@@ -22,6 +22,8 @@ img {
 body {
   font-family: "Roboto", sans-serif;
   background-color: #3489fd;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 h1 {
