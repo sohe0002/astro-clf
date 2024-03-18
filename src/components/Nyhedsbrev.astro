@@ -1,0 +1,170 @@
+---
+
+---
+
+<section>
+  <div class="firkant">
+    <img src="billeder/X.svg" alt="krydstegn" />
+    <h2>Tilmeld dig vores nyhedsbrev</h2>
+
+    <form class="myForm">
+      <div class="form-name">
+        <label>
+          <input type="text" placeholder="Navn" id="navn" name="navn" />
+        </label>
+      </div>
+
+      <div class="form-mail">
+        <label>
+          <input type="email" placeholder="Mail" name="mail" id="mail" />
+        </label>
+      </div>
+    </form>
+
+    <form class="form-type">
+      <div class="besog">
+        <input type="checkbox" id="besogende" name="besogende" />
+        <label for="besogende">Besøgende</label>
+      </div>
+
+      <div class="kunstner">
+        <input type="checkbox" name="kunstner" id="kunster" />
+        <label for="kunstner">Kunstner</label>
+      </div>
+
+      <div class="partner">
+        <input type="checkbox" name="partner" id="partner" />
+        <label for="partner">Partner</label>
+      </div>
+    </form>
+
+    <div class="div_knap">
+      <button class="submit-knap" id="submit-knap" type="button">
+        Skriv mig på listen nu, TAK
+      </button>
+    </div>
+    <p>
+      Ved tilmelding skriver du dig op til at modtage nyhedsbrev. Du kan altid
+      afmelde dig igen. Se mere <u>her</u>
+    </p>
+  </div>
+</section>
+
+<style>
+  .myForm {
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .myForm label input {
+    border-radius: 20px;
+    height: 40px;
+    width: 200px;
+    padding-left: 15px;
+  }
+
+  .form-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    padding-bottom: 20px;
+  }
+  .form-type label {
+    color: white;
+    font-size: 15px;
+  }
+
+  .form-name,
+  .form-mail {
+    padding: 5px;
+    background-color: #fb00ff78;
+  }
+
+  .submit-knap {
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .div_knap {
+    text-align: center;
+  }
+
+  .div_knap button {
+    font-size: 12px;
+    align-self: center;
+    height: 40px;
+    width: 250px;
+    color: #fa00ff;
+    background-color: white;
+    font-size: 15px;
+  }
+
+  h2 {
+    text-align: center;
+    padding-top: 25px;
+  }
+  .firkant {
+    background-color: #fa00ff;
+    padding: 30px;
+    padding-top: 0;
+    width: 400px;
+    height: 420px;
+  }
+  .firkant p {
+    font-size: 14px;
+    padding-top: 20px;
+  }
+  .firkant {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img {
+    height: 30px;
+    position: relative;
+    top: 8px;
+    left: 170px;
+  }
+  @media (min-width: 800px) {
+    .firkant {
+      width: 1400px;
+      height: 700px;
+      padding: 100px;
+      padding-top: 20px;
+    }
+    .firkant p {
+      font-size: 30px;
+      text-align: center;
+      padding-top: 40px;
+    }
+    img {
+      height: 55px;
+      top: 8px;
+      left: 630px;
+    }
+    h2 {
+      font-size: 40px;
+      padding-bottom: 30px;
+    }
+    .div_knap button {
+      height: 60px;
+      width: 550px;
+      font-size: 30px;
+    }
+    .div_knap {
+      padding-top: 20px;
+    }
+    .myForm label input {
+      height: 60px;
+      width: 300px;
+      font-size: 20px;
+    }
+    .form-type label {
+      font-size: 25px;
+    }
+    .form-type {
+      padding-top: 10px;
+    }
+  }
+</style>
