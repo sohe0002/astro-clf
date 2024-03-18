@@ -1,0 +1,46 @@
+---
+
+---
+
+<section>
+  <h3>Områder:</h3>
+
+  <ul>
+    <li>Vesterbro</li>
+    <li>Nørrebro</li>
+    <li>Østerbro</li>
+    <li>Indre by</li>
+    <li>København S</li>
+    <li>Vestre Kirkegård</li>
+    <li>Refshaleøen</li>
+  </ul>
+</section>
+
+<style>
+  ul {
+    list-style: none;
+    color: var(--primary);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  @media (min-width: 800px) {
+    ul {
+      display: grid;
+      grid-template-rows: repeat(6 1fr);
+      grid-template-columns: 1fr;
+   ´
+    }
+
+    li{
+        font-size: 20px
+    }
+
+  }
+</style>
