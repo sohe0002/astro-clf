@@ -1,0 +1,121 @@
+---
+
+---
+
+<article>
+  <h1 class="titel_vaerk">01. Du som er i Himlene!</h1>
+  <h3>Af Marie Nørgaard (DK)</h3>
+  <img
+    src="billeder/1.vaerk.jpg"
+    alt="Billede af værket"
+    class="billede_vaerk"
+  />
+  <div class="beskrivelse">
+    <p>
+      Værket skaber en forbindelse mellem jorden under os og himmelen over os.
+      Mellem det fysiske og det åndelige. Overgivelse til noget, som er højere
+      end os. Et sted, hvor man kan forbinde sig til det, man tror på. Marie
+      Nørgaard Nielsen er en dansk tekstilkunstner, som tidligere har deltaget i
+      Copenhagen Light Festival med Oraklet i 2022 og med På den anden side af
+      Solen i 2023, der senere samme år var en del af festivalen Light Art
+      Grindelwald i de schweiziske alper. Mani Nikdel er en iransk designer og
+      kunstner, bosat i Århus. Han har deltaget på Copenhagen Light Festival de
+      seneste to år med Transcendence i 2022 og Terra i 2023.
+    </p>
+    <ul>
+      <li>Lys:Mani Nikdel</li>
+      <li>
+        Links:Instagram: @marienoergaardnielsen Instagram: @maninikdelstudio
+      </li>
+      <li>
+        Tak til:Mathilde Märcher, Jes Hermann Saatterup, Erik Larsen & Søn,
+        Martin Lighting.
+      </li>
+    </ul>
+    <div class="lokation">
+      <img src="billeder/pin.svg" alt="Pin" class="pin" />
+      <h3 class="placering">Højbro Plads</h3>
+    </div>
+  </div>
+</article>
+
+<style>
+  h1,
+  h3 {
+    text-align: right;
+
+    position: relative;
+    z-index: 100;
+  }
+
+  article {
+    padding-top: 50px;
+  }
+
+  .billede_vaerk {
+    width: 400px;
+    height: 400px;
+    left: 30px;
+    position: relative; /* Gør billedets position relativ, så det overlapper med den absolut positionerede beskrivelse */
+    z-index: 0; /* Sørger for, at billedet er bag beskrivelsen */
+    object-fit: cover;
+  }
+
+  .pin {
+    width: 3%;
+  }
+
+  .placering {
+    color: black;
+  }
+
+  .lokation {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+    padding: 80px 0 20px 0;
+  }
+
+  .beskrivelse {
+    background-color: white;
+    padding: 30px;
+    position: absolute;
+    top: 350px;
+    left: 230px;
+    right: 10px;
+    width: 70%;
+    z-index: 1; /* Sørger for, at beskrivelsen ligger over billedet */
+  }
+  .beskrivelse p {
+    color: black;
+  }
+
+  ul {
+    padding: 20px 0 20px 20px;
+    list-style: none;
+  }
+
+  @media (min-width: 800px) {
+    .beskrivelse {
+      background-color: white;
+      padding: 30px;
+      position: absolute;
+      top: 350px;
+      left: 430px;
+      right: 40px;
+      z-index: 1; /* Sørger for, at beskrivelsen ligger over billedet */
+    }
+    .billede_vaerk {
+      width: 75%;
+      height: 400px;
+      left: 30px;
+      position: relative; /* Gør billedets position relativ, så det overlapper med den absolut positionerede beskrivelse */
+      z-index: 0; /* Sørger for, at billedet er bag beskrivelsen */
+      object-fit: cover;
+    }
+  }
+  .placering {
+  }
+</style>
