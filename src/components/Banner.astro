@@ -1,0 +1,36 @@
+---
+
+---
+
+<section>
+  <p>
+    2-25. Februar &nbsp;-&nbsp; København &nbsp;-&nbsp; 2-25. Februar&nbsp; -
+    &nbsp;København &nbsp;-&nbsp; 2-25. Februar &nbsp;- &nbsp;København
+    &nbsp;-&nbsp; 2-25. Februar&nbsp; - &nbsp;København &nbsp;- &nbsp;2-25.
+    Februar &nbsp;- &nbsp;København -
+  </p>
+</section>
+
+<style>
+  p {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    position: absolute; /* Absolutt posisjonering relativt til foreldreelementet */
+    left: -10%; /* Flytt teksten til venstre med halvparten av foreldreelementets bredde */
+    right: -50%; /* Flytt teksten til høyre med halvparten av foreldreelementets bredde */
+    white-space: nowrap; /* Hindre linjeskift */
+  }
+
+  section {
+    width: 100%; /* Sørg for at containeren tar opp hele bredden av foreldreelementet */
+    overflow-x: auto; /* Tillat horisontal scrolling */
+    white-space: nowrap; /* Hindre linjeskift */
+  }
+
+  @media (min-width: 800px) {
+    p {
+      font-size: 30px;
+    }
+  }
+</style>
