@@ -1,5 +1,8 @@
 ---
-
+import Layout from "../Layout.astro";
+import Nyhedsbrev_footer from "../components/Nyhedsbrev_footer.astro";
+import Vaerk from "../components/Vaerk.astro";
+import Headmenu from "../components/Headmenu.astro";
 ---
 
 <html lang="en">
@@ -11,6 +14,8 @@
     <title>Astro</title>
   </head>
   <body>
-    <h1>Astro</h1>
+    <Layout>
+      <Vaerk />
+    </Layout>
   </body>
 </html>
