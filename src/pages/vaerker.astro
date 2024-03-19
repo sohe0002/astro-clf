@@ -22,22 +22,26 @@ const data = await response.json();
 
 <Layout>
   <h1>Værker</h1>
-
-  <Omraede />
-  <Knap />
-
-  {
-    data.map((vaerk) => {
-      return (
-        <Vaerk_overview
-          titel={vaerk.titel}
-          nummer={vaerk.nummer}
-          img={vaerk.img}
-          placering={vaerk.placering}
-        />
-      );
-    })
-  }
+  <div class="grid_1_1">
+    <div class="sticky">
+      <Omraede />
+      <Knap />
+    </div>
+    <div class="vaerker">
+      {
+        data.map((vaerk) => {
+          return (
+            <Vaerk_overview
+              titel={vaerk.titel}
+              nummer={vaerk.nummer}
+              img={vaerk.img}
+              placering={vaerk.placering}
+            />
+          );
+        })
+      }
+    </div>
+  </div>
 </Layout>
 
 <style>
@@ -50,6 +54,18 @@ const data = await response.json();
   @media (min-width: 800px) {
     h1 {
       font-size: 80px;
+    }
+    .grid_1_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+    }
+
+    .sticky {
+      position: fixed;
+    }
+    .vaerker {
+      grid-column: 2;
     }
   }
 </style>
