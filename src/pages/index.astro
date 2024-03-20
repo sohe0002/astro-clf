@@ -2,18 +2,157 @@
 import Layout from "../Layout.astro";
 import Headmenu from "../components/Headmenu.astro";
 import Banner from "../components/Banner.astro";
-import Nyhedsbrev from "../components/Nyhedsbrev.astro"
+import Nyhedsbrev from "../components/Nyhedsbrev.astro";
+import Knap from "../components/Knap.astro";
 ---
 
 <Layout>
-  <h2>Om os</h2>
+  <img src="/billeder/forsidebillede.jpg" alt="forsidebillede" />
+  <div class="grid_1_1">
+    <div class="kvadratbilleder">
+      <img src="/billeder/kvadratbillede1.jpg" alt="kvadratbillede1" />
+      <img src="/billeder/kvadratbillede2.jpg" alt="kvadratbillede2" />
+      <img src="/billeder/kvadratbillede3.jpg" alt="kvadratbillede3" />
+      <img src="/billeder/kvadratbillede4.jpg" alt="kvadratbillede4" />
+    </div>
+
+    <div>
+      <h1>Om os</h1>
+      <p>
+        Copenhagen Light Festival omdanner vintermørket i København til en unik
+        fejring af lyskunst. I løbet af tre uger i februar præsenteres et
+        varieret udvalg af lysbaserede kunstværker fra både etablerede og nye
+        lysdesignere, kunstnere, studerende og organisationer. Festivalen
+        iscenesætter byens rum på nye og spændende måder, med værker langs en
+        rute i indre by samt udenfor centrum. Både udendørs og indendørs events
+        bidrager til den lyse atmosfære.
+      </p>
+    </div>
+  </div>
+
+  <h2>Læs mere her</h2>
+  <hr />
+  <ul>
+    <li>Om festivalen</li>
+    <hr />
+    <li>Årets festival</li>
+    <hr />
+    <li>Til kunstneren</li>
+    <hr />
+    <li>Praktisk information</li>
+    <hr />
+  </ul>
+
   <Banner />
-  <Nyhedsbrev/>
-  
+  <div class="grid_1_2">
+    <div>
+      <img src="/billeder/tivolilogo.png" alt="tivoli logo" />
+      <img src="/billeder/unibrewlogo.png" alt="unibrew logo" />
+      <img src="/billeder/vnrlogo.png" alt="vnr logo" />
+      <img src="/billeder/strommalogo.png" alt="stromma logo" />
+      <img src="/billeder/kbhlogo.png" alt="kbh kommune logo" />
+    </div>
+    <div>
+      <h2>Partnere og sponsorer</h2>
+      <p>
+        Søger I et strategisk partnerskab, der skaber unikke muligheder for
+        brandaktivering? Med København som kulisse søger foreningen at
+        introducere og præsentere lyskunst i interaktion med byens særpræg,
+        mørke og æstetik.
+      </p>
+      <Knap />
+    </div>
+  </div>
+
+  <div class="padding"></div>
+
+  <Banner />
+
+  <div class="padding"></div>
 </Layout>
 
 <style>
+  h1 {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    color: var(--farve1);
+  }
+
+  p {
+    padding-bottom: 40px;
+    line-height: 30px;
+  }
+
   h2 {
-    p
+    padding-left: 20px;
+  }
+
+  .padding {
+    padding: 40px;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  ul {
+    list-style: none;
+    padding-bottom: 60px;
+    padding-left: 20px;
+  }
+  li {
+    color: var(--primary);
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+
+  hr {
+    height: 4px;
+    width: 500px;
+    background-color: var(--primary);
+    padding-left: 20px;
+  }
+
+  .kvadratbilleder {
+  }
+
+  .grid_1_1 {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .grid_1_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 70px;
+  }
+
+  .grid_1_2 p {
+    padding-left: 20px;
+    padding-top: 10px;
+    line-height: 30px;
+  }
+
+  @media (min-width: 800px) {
+    .kvadratbilleder {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .grid_1_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 20px;
+    }
   }
 </style>
