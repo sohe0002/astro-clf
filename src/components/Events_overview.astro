@@ -1,0 +1,89 @@
+---
+const { titel, img, placering, id, dato } = Astro.props;
+---
+
+<a href={`/events/${id}`}>
+  <section>
+    <div class="billede_tekst">
+      <div class="billede">
+        <img src={img} alt="billede af værk" />
+      </div>
+      <div>
+        <div class="titel">
+          <h1>{titel}</h1>
+        </div>
+        <div class="placering">
+          <h2>dato</h2>
+        </div>
+      </div>
+    </div>
+  </section></a
+>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 40px 0;
+  }
+  .billede_tekst {
+    position: relative;
+    display: inline-block;
+  }
+  .nummer {
+    font-size: 60px;
+  }
+  .billede img {
+    height: 120px;
+    width: 410px;
+    object-fit: cover;
+    position: relative;
+    padding-right: 100px;
+    padding-left: 10px;
+  }
+  .titel {
+    font-size: 20px;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    text-align: right;
+    font-weight: bolder;
+  }
+  .placering {
+    font-size: 15px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    text-align: right;
+  }
+  @media (min-width: 800px) {
+    section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: right;
+      right: 100px;
+      margin: 40px 100px 40px 0;
+    }
+    .billede img {
+      height: 250px;
+      width: 800px;
+    }
+    .nummer {
+      font-size: 80px;
+    }
+    .titel {
+      font-size: 40px;
+      position: absolute;
+      top: 25px;
+    }
+    .placering {
+      font-size: 25px;
+      position: absolute;
+      top: 60px;
+      padding-top: 40px;
+    }
+  }
+</style>
