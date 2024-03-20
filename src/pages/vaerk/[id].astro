@@ -1,0 +1,116 @@
+---
+import Layout from "../../Layout.astro";
+import Nyhedsbrev_footer from "../../components/Nyhedsbrev_footer.astro";
+import Vaerk from "../../components/Vaerk.astro";
+import Headmenu from "../../components/Headmenu.astro";
+// Fetch-anmodningen sendes til en bestemt URL
+export async function getStaticPaths() {
+  const response = await fetch(
+    "https://zxqnkjdyztxcbysqugsa.supabase.co/rest/v1/clf",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp4cW5ramR5enR4Y2J5c3F1Z3NhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NjI4NTEsImV4cCI6MjAyNjMzODg1MX0.YxIUs_uwIdOwvu_Pn862bqcGegvtfDP99P_My1r3phU",
+      },
+    }
+  );
+  const data = await response.json();
+  return data.map((vaerk) => {
+    return { params: { id: vaerk.id }, props: { data: vaerk } };
+  });
+}
+
+const { data } = Astro.props;
+console.log(data);
+---
+
+<Layout>
+  <article>
+    <h1 class="titel_vaerk">{data.titel}</h1>
+    <h3>{data.kunstner}</h3>
+    <img src={data.img} alt="Billede af værket" class="billede_vaerk" />
+    <div class="beskrivelse">
+      <p>
+        {data.beskrivelse}
+      </p>
+      <div class="lokation">
+        <img src="billeder/pin.svg" alt="Pin" class="pin" />
+        <h3 class="placering">{data.placering}</h3>
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  h1,
+  h3 {
+    text-align: right;
+
+    position: relative;
+    z-index: 100;
+  }
+
+  article {
+    padding-top: 50px;
+    max-width: 800px; /* Adjust as needed */
+  }
+
+  .billede_vaerk {
+    width: 500px;
+    height: 500px;
+    left: 10px;
+    position: relative; /* Gør billedets position relativ, så det overlapper med den absolut positionerede beskrivelse */
+    z-index: 0; /* Sørger for, at billedet er bag beskrivelsen */
+    object-fit: cover;
+  }
+
+  .pin {
+    width: 3%;
+  }
+
+  .placering {
+    color: black;
+  }
+
+  .lokation {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+    padding: 80px 0 20px 0;
+  }
+
+  .beskrivelse {
+    background-color: white;
+    padding: 30px;
+    position: absolute;
+    top: 350px;
+    left: 230px;
+    width: 60%;
+    z-index: 1; /* Sørger for, at beskrivelsen ligger over billedet */
+  }
+  .beskrivelse p {
+    color: black;
+  }
+
+  ul {
+    padding: 20px 0 20px 20px;
+    list-style: none;
+  }
+
+  @media (min-width: 800px) {
+    .billede_vaerk {
+      max-width: 1000px;
+      width: 75%;
+      height: 500px;
+      left: 30px;
+      position: relative; /* Gør billedets position relativ, så det overlapper med den absolut positionerede beskrivelse */
+      z-index: 0; /* Sørger for, at billedet er bag beskrivelsen */
+      object-fit: cover;
+    }
+  }
+  .placering {
+  }
+</style>

@@ -1,7 +1,8 @@
 ---
-const { titel, nummer, img, placering } = Astro.props;
+const { titel, nummer, img, placering,id } = Astro.props;
 ---
 
+<a href={`/vaerk/${id}`}>
 <section>
   <div class="nummer">
     <p>{nummer}</p>
@@ -19,7 +20,7 @@ const { titel, nummer, img, placering } = Astro.props;
       </div>
     </div>
   </div>
-</section>
+</section></a>
 
 <style>
   section {

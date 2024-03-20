@@ -1,0 +1,142 @@
+---
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Astro</title>
+  </head>
+  <body>
+    <section>
+      <header>
+        <a href="index.astro">
+          <img src="billeder/logo.svg" alt="logo" />
+        </a>
+        <a href="index.astro">
+          <img src="billeder/X.svg" alt="" class="kryds" />
+        </a>
+      </header>
+      <div class="soegefelt">
+        <img src="" alt="" />
+      </div>
+      <div class="info">
+        <div>
+          <h1>Om festivalen</h1>
+          <p>Hvem er vi?</p>
+          <p>Hvad er CLF?</p>
+          <p>Vision</p>
+          <p>Partnere og sponsorer</p>
+        </div>
+        <div>
+          <h1>Årest Festival</h1>
+          <a href="vaerker.astro">
+            <p>Værker</p>
+          </a>
+          <p>Festival map</p>
+          <p>Guidede ture</p>
+          <a href="events.astro">
+            <p>Events</p>
+          </a>
+
+          <p>Udforsk København</p>
+        </div>
+        <div>
+          <h1>Til kunstneren</h1>
+          <p>Fotokonkurrence</p>
+          <p>For kunstnere</p>
+          <p>Bliv vært for et lysværk</p>
+          <p>Permanente installationer</p>
+        </div>
+        <div>
+          <h1>Praktisk information</h1>
+          <p>Personlige oplysninger</p>
+          <p>Presse og billeder</p>
+          <p>Kontakt</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<style>
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header img {
+    height: 80px;
+    margin: 15px;
+  }
+  .kryds img {
+    height: 30px;
+  }
+  section {
+    background-color: #3489fd;
+    padding-bottom: 400px;
+  }
+  section p {
+    color: white;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+  }
+  section p:hover {
+    background-color: white;
+    color: #3489fd;
+    font-family: "Roboto", sans-serif;
+  }
+  section h1 {
+    color: white;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+  }
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 30px;
+  }
+  .info div {
+    margin: 20px;
+  }
+  body {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  @media (min-width: 800px) {
+    .info {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      margin-left: 200px;
+      margin-right: 200px;
+      margin-top: 150px;
+    }
+    .info div {
+      margin: 10px;
+    }
+    .info div p {
+      margin: 30px;
+    }
+    section p {
+      font-size: 25px;
+    }
+    section h1 {
+      font-size: 30px;
+      margin: 30px;
+    }
+    header img {
+      margin: 30px;
+    }
+  }
+</style>
