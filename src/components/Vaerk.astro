@@ -1,40 +1,20 @@
 ---
+const { titel, nummer, img, placering, beskrivelse, kunstner } = Astro.props;
 
 ---
 
 <article>
-  <h1 class="titel_vaerk">01. Du som er i Himlene!</h1>
-  <h3>Af Marie Nørgaard (DK)</h3>
-  <img
-    src="billeder/1.vaerk.jpg"
-    alt="Billede af værket"
-    class="billede_vaerk"
+  <h1 class="titel_vaerk">{titel}</h1>
+  <h3>{kunstner}</h3>
+  <img src={img} alt="Billede af værket" class="billede_vaerk"
   />
   <div class="beskrivelse">
     <p>
-      Værket skaber en forbindelse mellem jorden under os og himmelen over os.
-      Mellem det fysiske og det åndelige. Overgivelse til noget, som er højere
-      end os. Et sted, hvor man kan forbinde sig til det, man tror på. Marie
-      Nørgaard Nielsen er en dansk tekstilkunstner, som tidligere har deltaget i
-      Copenhagen Light Festival med Oraklet i 2022 og med På den anden side af
-      Solen i 2023, der senere samme år var en del af festivalen Light Art
-      Grindelwald i de schweiziske alper. Mani Nikdel er en iransk designer og
-      kunstner, bosat i Århus. Han har deltaget på Copenhagen Light Festival de
-      seneste to år med Transcendence i 2022 og Terra i 2023.
+      {beskrivelse}
     </p>
-    <ul>
-      <li>Lys:Mani Nikdel</li>
-      <li>
-        Links:Instagram: @marienoergaardnielsen Instagram: @maninikdelstudio
-      </li>
-      <li>
-        Tak til:Mathilde Märcher, Jes Hermann Saatterup, Erik Larsen & Søn,
-        Martin Lighting.
-      </li>
-    </ul>
     <div class="lokation">
       <img src="billeder/pin.svg" alt="Pin" class="pin" />
-      <h3 class="placering">Højbro Plads</h3>
+      <h3 class="placering">{placering}</h3>
     </div>
   </div>
 </article>
