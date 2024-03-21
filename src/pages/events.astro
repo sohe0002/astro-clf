@@ -8,7 +8,7 @@ import Knap from "../components/Knap.astro";
 
 // Fetch-anmodningen sendes til en bestemt URL
 const response = await fetch(
-  "https://zxqnkjdyztxcbysqugsa.supabase.co/rest/v1/events_clf?",
+  "https://zxqnkjdyztxcbysqugsa.supabase.co/rest/v1/events_clf",
   {
     method: "GET",
     headers: {
@@ -34,7 +34,7 @@ const data = await response.json();
             <Events_overview
               titel={events.titel}
               nummer={events.nummer}
-              img={events.img}
+              img=`/billeder/600/{events.img}``
               placering={events.placering}
               id={events.id}
             />
