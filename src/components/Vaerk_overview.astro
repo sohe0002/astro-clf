@@ -1,26 +1,27 @@
 ---
-const { titel, nummer, img, placering,id } = Astro.props;
+const { titel, nummer, img, placering, id } = Astro.props;
 ---
 
 <a href={`/vaerk/${id}`}>
-<section>
-  <div class="nummer">
-    <p>{nummer}</p>
-  </div>
-  <div class="billede_tekst">
-    <div class="billede">
-      <img src={img} alt="billede af værk" />
+  <section>
+    <div class="nummer">
+      <p>{nummer}</p>
     </div>
-    <div>
-      <div class="titel">
-        <h1>{titel}</h1>
+    <div class="billede_tekst">
+      <div class="billede">
+        <img src={`/billeder/600/` + img} alt="billede af værk3" />
       </div>
-      <div class="placering">
-        <h2>{placering}</h2>
+      <div>
+        <div class="titel">
+          <h1>{titel}</h1>
+        </div>
+        <div class="placering">
+          <h2>{placering}</h2>
+        </div>
       </div>
     </div>
-  </div>
-</section></a>
+  </section></a
+>
 
 <style>
   section {
@@ -29,7 +30,6 @@ const { titel, nummer, img, placering,id } = Astro.props;
     align-items: center;
     justify-content: center;
     margin: 40px 0 40px 0;
-
   }
   .billede_tekst {
     position: relative;
@@ -63,14 +63,13 @@ const { titel, nummer, img, placering,id } = Astro.props;
   }
   @media (min-width: 800px) {
     section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: right;
-    right: 100px;
-    margin: 40px 100px 40px 0;
-
-  }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: right;
+      right: 100px;
+      margin: 40px 100px 40px 0;
+    }
     .billede img {
       height: 250px;
       width: 800px;
@@ -87,7 +86,7 @@ const { titel, nummer, img, placering,id } = Astro.props;
       font-size: 25px;
       position: absolute;
       top: 60px;
-      padding-top:40px
+      padding-top: 40px;
     }
   }
 </style>

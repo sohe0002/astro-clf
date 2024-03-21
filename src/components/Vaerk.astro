@@ -1,13 +1,11 @@
 ---
 const { titel, nummer, img, placering, beskrivelse, kunstner } = Astro.props;
-
 ---
 
 <article>
   <h1 class="titel_vaerk">{titel}</h1>
   <h3>{kunstner}</h3>
-  <img src={img} alt="Billede af værket" class="billede_vaerk"
-  />
+  <img src={img} alt="Billede af værket" class="billede_vaerk" />
   <div class="beskrivelse">
     <p>
       {beskrivelse}
