@@ -5,47 +5,50 @@
 <section>
   <a href="/"> <img src="billeder/logo.svg" alt="logo" class="logo" /></a>
   <p>2-25. Februar 2024 @København</p>
-  <div class="ikoner">
-    <img src="/billeder/sprog.svg" alt="sprog logo" />
-    <img src="/billeder/search.svg" alt="search logo" />
-    <a href="navigation">
-      <img src="/billeder/burgermenu.svg" alt="burgermenu logo" /></a
-    >
-  </div>
-</section>
+  <a href="navigation"
+    ><div class="ikoner">
+      <img src="/billeder/sprog.svg" alt="sprog logo" />
+      <img src="/billeder/search.svg" alt="search logo" />
 
-<style>
-  .logo {
-    width: 60px;
-  }
+      <img src="/billeder/burgermenu.svg" alt="burgermenu logo" />
+      >
+    </div>
+  </a>
 
-  section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .ikoner {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    height: 20px;
-    padding-right: 8px;
-  }
-
-  p {
-    color: var(--primary);
-  }
-
-  @media (min-width: 800px) {
+  <style>
     .logo {
-      width: 80px;
+      width: 60px;
+    }
+
+    section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      z-index: 2;
     }
 
     .ikoner {
-      height: 25px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      height: 10px;
+      padding-right: 8px;
     }
-  }
-</style>
+
+    p {
+      color: var(--primary);
+    }
+
+    @media (min-width: 800px) {
+      .logo {
+        width: 80px;
+      }
+
+      .ikoner {
+        height: 25px;
+      }
+    }
+  </style>
+</section>
