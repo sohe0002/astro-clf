@@ -34,13 +34,15 @@ const data = await response.json();
       {
         data.map((events) => {
           return (
-            <Events_overview
-              titel={events.titel}
-              nummer={events.nummer}
-              img=`/billeder/600/{events.img}``
-              placering={events.placering}
-              id={events.id}
-            />
+            <>
+              <Events_overview
+                titel={events.titel}
+                nummer={events.nummer}
+                placering={events.placering}
+                id={events.id}
+                img={events.img}
+              />
+            </>
           );
         })
       }

@@ -6,7 +6,7 @@ const { titel, img, placering, id, dato } = Astro.props;
   <section>
     <div class="billede_tekst">
       <div class="billede">
-        <img src={img} alt="billede af værk" />
+        <img src={`/billeder/600/` + img} alt="billede af værk" />
       </div>
       <div>
         <div class="titel">
