@@ -25,7 +25,10 @@ const data = await response.json();
   <div class="grid_1_1">
     <div class="sticky">
       <Omraede />
-      <Knap />
+
+      <div class="knap">
+        <a href="vaerker"><button> Værker </button></a>
+      </div>
     </div>
     <div class="vaerker">
       {
@@ -52,6 +55,16 @@ const data = await response.json();
     padding: 20px;
   }
 
+  button {
+    border: 2px solid #ffffff;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    color: var(--primary);
+    background-color: transparent;
+    margin-top: 20px;
+  }
+
   @media (min-width: 800px) {
     h1 {
       font-size: 80px;
@@ -68,10 +81,16 @@ const data = await response.json();
     .vaerker {
       grid-column: 2;
     }
+    button {
+      width: 100px;
+      height: 35px;
+      font-size: 15px;
+    }
   }
 </style>
 
- curl 'https://zxqnkjdyztxcbysqugsa.supabase.co/rest/v1/events_clf?select=some_column,other_column'
-\ -H "apikey: SUPABASE_CLIENT_ANON_KEY" \ -H "Authorization: Bearer SUPABASE_CLIENT_ANON_KEY"
-
+curl
+'https://zxqnkjdyztxcbysqugsa.supabase.co/rest/v1/events_clf?select=some_column,other_column'
+\ -H "apikey: SUPABASE_CLIENT_ANON_KEY" \ -H "Authorization: Bearer
+SUPABASE_CLIENT_ANON_KEY"
 

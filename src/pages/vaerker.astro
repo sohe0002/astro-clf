@@ -4,7 +4,6 @@ import Nyhedsbrev_footer from "../components/Nyhedsbrev_footer.astro";
 import Vaerk_overview from "../components/Vaerk_overview.astro";
 import Headmenu from "../components/Headmenu.astro";
 import Omraede from "../components/Omraede.astro";
-import Knap from "../components/Knap.astro";
 
 // Fetch-anmodningen sendes til en bestemt URL
 const response = await fetch(
@@ -25,7 +24,10 @@ const data = await response.json();
   <div class="grid_1_1">
     <div class="sticky">
       <Omraede />
-      <Knap />
+
+      <div class="knap">
+        <a href="events"><button> Events </button></a>
+      </div>
     </div>
     <div class="vaerker">
       {
@@ -51,6 +53,15 @@ const data = await response.json();
     font-size: 55px;
     padding: 20px;
   }
+  button {
+    border: 2px solid #ffffff;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    color: var(--primary);
+    background-color: transparent;
+    margin-top: 20px;
+  }
 
   @media (min-width: 800px) {
     h1 {
@@ -67,6 +78,11 @@ const data = await response.json();
     }
     .vaerker {
       grid-column: 2;
+    }
+    button {
+      width: 100px;
+      height: 35px;
+      font-size: 15px;
     }
   }
 </style>
