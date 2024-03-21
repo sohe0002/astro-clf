@@ -1,4 +1,5 @@
 ---
+//@ts-nocheck
 import Layout from "../../Layout.astro";
 import Nyhedsbrev_footer from "../../components/Nyhedsbrev_footer.astro";
 import Vaerk from "../../components/Vaerk.astro";
@@ -29,13 +30,13 @@ console.log(data);
   <article>
     <h1 class="titel_vaerk">{data.titel}</h1>
     <h3>{data.kunstner}</h3>
-    <img src={data.img} alt="Billede af værket" class="billede_vaerk" />
+    <img src={`/billeder/600/` + data.img} alt="billede af værk" />
     <div class="beskrivelse">
       <p>
         {data.beskrivelse}
       </p>
       <div class="lokation">
-        <img src="billeder/pin.svg" alt="Pin" class="pin" />
+        <img src="/billeder/pin.svg" alt="Pin" class="pin" />
         <h3 class="placering">{data.placering}</h3>
       </div>
     </div>
